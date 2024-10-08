@@ -6,7 +6,6 @@ const AddBook = () => {
   return (
     <>
       <Navbar />
-      <div>AddBook</div>
       <Footer />
     </>
 
