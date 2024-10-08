@@ -5,6 +5,7 @@ import AddBook from './pages/addBook';
 import BookDetails from './pages/bookDetails';
 import LandingPage from './pages/landingPage';
 
+
 function App() {
 
   const router = createBrowserRouter([
@@ -27,9 +28,17 @@ function App() {
     },
   ])
 
+<<<<<<< HEAD
   return (
     <RouterProvider router={router} />
   )
 };
+=======
+  return <RouterProvider router={router}/>
+
+
+  
+}
+>>>>>>> bdca2b7af60f0648edc1170d5a1928d0f8a2cd5c
 
 export default App;

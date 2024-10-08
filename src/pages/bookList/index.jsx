@@ -71,7 +71,7 @@ const BookList = () => {
       </div>
       <Footer />
     </>
-  );
+  )
 };
 
 export default BookList;
