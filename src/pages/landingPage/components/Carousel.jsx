@@ -6,6 +6,18 @@ const Carousel = () => {
 
             <div className="list">
 
+                <div className="landing-page w-[180px] h-[250px] rounded-[20px] bg-[url('./src/assets/images/harry-porter.jpg')] " >
+
+                </div>
+                <div className="landing-page w-[180px] h-[250px] rounded-[20px]  ">
+
+                </div>
+                <div className="landing-page w-[180px] h-[250px] rounded-[20px] bg-[url('./src/assets/images/janne.jpg') ">
+
+                </div>
+                <div className="landing-page w-[180px] h-[250px] rounded-[20px] ">
+
+                </div>
                 <div className="landing-page w-[180px] h-[250px] rounded-[20px] ">
 
                 </div>
