@@ -1,0 +1,12 @@
+.landing-page {
+    background-image: url('./assets/images/harry-porter.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+    top: 80%;
+    transform: translateY(-75%);
+    left: 70%;
+}
+
+
