@@ -9,7 +9,7 @@ const BookList = () => {
   return (
 
     <>
-      <Link to={"/add-new"}>Add Book</Link>
+      {/* <Link to={"/add-new"}>Add Book</Link> */}
       <Navbar />
       <div>
 
