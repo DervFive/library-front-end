@@ -1,5 +1,4 @@
 
-import LandingText from "./LandingText";
 
 
 const Carousel = () => {
