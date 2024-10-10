@@ -5,10 +5,13 @@ import { Link } from 'react-router-dom';
 const Navbar = () => {
   return (
 
-    <div className="h-screen w-[11rem] bg-white  flex flex-col p-4 fixed shadow-xl">
-  
-      <h3 className="text-black font-bold mb-8">THE BOOKS</h3>
-      <nav className="flex flex-col space-y-4 ml-4 text-white">
+    <div className="h-screen w-[10rem] bg-white flex flex-col p-4 fixed shadow-xl">
+      <h3 className="text-black font-bold mb-8">DevShelf</h3>
+
+
+
+      <nav className="flex flex-col space-y-4">
+
 
         <p className='text-gray-600 text-[12px] pl-[8px]'>MENU</p>
 
