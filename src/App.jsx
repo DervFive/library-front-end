@@ -26,6 +26,7 @@ function App() {
       path: "/books/:id",
       element: <BookDetails />
     },
+ 
   ])
 
   return <RouterProvider router={router}/>
