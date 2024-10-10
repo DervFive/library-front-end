@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 const Navbar = () => {
   return (
     <div className="h-screen w-[10rem] bg-white flex flex-col p-4 fixed">
-      <h3 className="text-black font-bold mb-8">THE BOOKS</h3>
+      <h3 className="text-black font-bold mb-8">THE BOOKS</h3> {/* logo goes here */}
 
       <nav className="flex flex-col space-y-4">
 

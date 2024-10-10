@@ -5,7 +5,7 @@ const BookDetails = () => {
     alert("Starting the book!");
   };
   const handleDeleteBook = () => {
-    alert("Delete the bool!");
+    alert("Delete the book!");
   }
 
   return (
@@ -24,14 +24,14 @@ const BookDetails = () => {
           <div className="w-2/3 pl-6">
             <header className="flex justify-between items-center mb-6">
               <h1 className="text-2xl font-bold">Harry Potter: Half Blood Prince</h1>
-              <div className="flex items-center space-x-3">
+              {/*<div className="flex items-center space-x-3">
                 <span className="text-gray-600">Alexander Mark</span>
                 <img
                   src="https://via.placeholder.com/40"
                   alt="User Avatar"
                   className="w-10 h-10 rounded-full"
                 />
-              </div>
+              </div>*/}
             </header>
 
             <h2 className="text-xl font-semibold">J.K. Rowling</h2>
@@ -39,26 +39,20 @@ const BookDetails = () => {
               Get ready to uncover the dark secrets and betrayals in the book. A
               thrilling adventure awaits you.
             </p>
-
-            <button className="mt-4 px-4 py-2 bg-black text-white rounded-full hover:bg-[#f57a49]"
+            <div className="flex flex-cols-5 gap-x-4">
+            <button className="mt-32 px-4 py-2 bg-black text-white rounded-full hover:bg-[#f57a49]"
               onClick={handleStartReading}>
               Start Reading
             </button>
-
-            <button className="mt-4 px-4 py-2 bg-black text-white rounded-full hover:bg-[#f57a49]"
-              onClick={handleStartReading} >
+           
+            <button className="mt-32 h-[6vh] px-4 py-2 bg-black text-white rounded-full hover:bg-[#f57a49]"
+              onClick={handleDeleteBook} >
               Delete Book
             </button>
-
-            <div className="mt-6">
-              <h3 className="text-lg font-semibold">Language</h3>
-              <p className="text-gray-600">Standard English (USA & UK)</p>
-            </div>
-            <div className="mt-6">
-              <h3 className="text-lg font-semibold">Date Published</h3>
-              <p className="text-gray-600">
-                345 pages, ISBN: 978-3-123-45678-9
-              </p>
+            {/* add icons for download,share,bookmark*/}
+            <div className="bg-slate-300 px-[6px] items-center py-[2px]  w-8 h-8 flex mt-32 justify-center rounded-full"><i class="fa-regular fa-bookmark"></i> </div>
+            <div className="bg-slate-300 px-[6px] py-[2px] items-center h-8 mt-32 rounded-full w-8 flex justify-center"> <i class="fa-solid fa-share-nodes"></i></div>
+            <div className="bg-slate-300 px-[6px] py-[2px] items-center h-8 mt-32 rounded-full flex justify-center w-8"><i class="fa-solid fa-download"></i></div>
             </div>
           </div>
         </div>
@@ -74,26 +68,33 @@ const BookDetails = () => {
           "Half-Blood Prince" is a must-read for any fan of the Harry Potter
           series.
         </p>
+        <div className="mt-6">
+              <h3 className="text-lg font-semibold">Language</h3>
+              <p className="text-gray-600">Standard English (USA & UK)</p>
+            </div>
+            <div className="mt-6">
+              <h3 className="text-lg font-semibold">Date Published</h3>
+              <p className="text-gray-600">
+                345 pages, ISBN: 978-3-123-45678-9
+              </p>
+            </div>
       </div>
 
       {/* Review / Form Section */}
 
-      <div className="flex items-center flex-col h-screen bg-gray-100 gap-4">
+      <div className="flex items-center flex-col h-screen bg-gray-100 gap-0 mt-10">
         <h1 className="font-bold">Review This Book</h1>
         <form className="flex flex-col gap-5 w-2/4 px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500">
-          <div>
             <input className="w-full border border-gray-300 rounded-md p-2 focus:ring-2 focus:ring-blue-500"
               type="text"
               placeholder="Comment"
               required
               name="comment" />
-
             <input className="w-full border border-gray-300 rounded-md p-2 focus:ring-2 focus:ring-blue-500"
               type="text"
               placeholder="Rate This Book"
               required
               name="Ratings" />
-          </div>
           </form>
 
         <div className="ml-4">
@@ -101,6 +102,14 @@ const BookDetails = () => {
           <p className="text-gray-600">
             "What a delightful and magical book it is! It indeed transports
             readers to the wizarding world."
+          </p>
+          <p className="font-semibold">Jessica M</p>
+          <p className="text-gray-600">
+            "From the moment I opened the first book, I was transported to a world of magic and wonder. The characters are incredibly well-developed, and the plots are filled with twists and turns. Harry's journey is one of courage and self-discovery, making it relatable and inspiring."
+          </p>
+          <p className="font-semibold">Reacheal T</p>
+          <p className="text-gray-600">
+            "The Half-Blood Prince is one of my favorites in the series! The blend of teenage angst, romance, and the looming threat of darkness creates a captivating narrative. The way Rowling unveils the history of Voldemort was fascinating and added a new layer to the story. I couldn't put it down."
           </p>
         </div>
       </div>
