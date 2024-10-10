@@ -1,3 +1,4 @@
+import LandingText from "./LandingText";
 
 
 
@@ -14,6 +15,7 @@ const Carousel = () => {
 
                 <div className="landing-page w-[180px] h-[250px] rounded-[20px] bg-[url('./src/assets/images/collection.jpg')] ">
                     {/* <LandingText /> */}
+                    <LandingText />
 
                 </div>
 
