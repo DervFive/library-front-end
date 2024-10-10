@@ -12,7 +12,7 @@ const BookList = () => {
 
     <>
       {/* <Link to={"/add-new"}>Add Book</Link> */}
-      <Navbar />
+      <Navbar /> 
 
       <section className='flex justify-center items-start h-screen bg-[#f1eee9]' >
 

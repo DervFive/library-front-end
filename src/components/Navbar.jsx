@@ -9,7 +9,7 @@ const Navbar = () => {
 
       <nav className="flex flex-col space-y-4">
 
-        <p className='text-gray-600'>MENU</p>
+        <p className='text-gray-600 text-[12px] pl-[8px]'>MENU</p>
 
         <Link to="/ Discover" className="flex items-center p-2 space-x-3 font-bold text-black">
           <div className='px-[6px] py-[2px] text-white rounded-[5px] bg-[#f57a49]'><i class="fa-solid fa-house"></i></div>
