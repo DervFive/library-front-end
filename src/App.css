@@ -162,3 +162,12 @@ body {
     }
 
 }
+
+
+.add-book{
+    background-image: url('./assets/images/addbook.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
