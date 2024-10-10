@@ -105,7 +105,7 @@ const BookDetails = () => {
               name="Ratings" />
           </form>
 
-          <div className="ml-4">
+          <div className=" ml-4">
             <p className="font-semibold">Roberto Jordan</p>
             <p className="text-gray-600">
               "What a delightful and magical book it is! It indeed transports
