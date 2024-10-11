@@ -5,10 +5,10 @@ const LandingPage = () => {
     return (
         <>
 
-            {/* <header className="landing-page h-[calc(100vh-70px)] m-[30px] rounded-[20px] drop-shadow-2xl ">
-              
-            </header> */}
-            <Carousel />
+            <header className=" rounded-[20px] drop-shadow-2xl ">
+                <Carousel />
+            </header>
+
 
         </>
     )
