@@ -1,18 +1,36 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom';
 import Navbar from '../../components/Navbar';
-import Footer from '../../components/Footer';
 import BookCovers from './components/BookCovers';
+import axios from 'axios';
+import { BASE_URL } from '../../constants';
+
+
 
 
 
 
 const BookList = () => {
-  return (
 
+  const [genres, setGenre] = useState([]);
+
+  const getGenre = async () => {
+    const response = await axios.get(`${BASE_URL}/books`);
+    setGenre(response.data)
+  };
+
+  useEffect(() => {
+    getGenre();
+  }, []);
+
+
+
+
+
+  return (
     <>
       {/* <Link to={"/add-new"}>Add Book</Link> */}
-      <Navbar /> 
+      < Navbar />
 
       <section className='flex justify-center items-start h-screen bg-[#f1eee9]' >
 
@@ -31,9 +49,11 @@ const BookList = () => {
 
                 <div className='sub-container flex flex-row gap-[10px] p-[5px] '>
 
-                  <select name="" id="" className='bg-transparent text-[12px] pr-[10px]'>
+                  <select name="genre" className='bg-transparent text-[12px] pr-[10px]'>
                     <option value="">All Categories</option>
-                    <option value="">Category</option>
+                    {genres.map((genre) => {
+                      return <option key={genre._id} value={genre._id}>{genre.genre}</option>;
+                    })}
                   </select>
 
                   <input type="text" placeholder='find the book you like' className='bg-transparent text-[13px] border-l-black border-l-[2px] text-center' />
@@ -48,14 +68,13 @@ const BookList = () => {
                 <button className='px-[10px] py-[5px] rounded-[5px] text-[12px] bg-white'>View all <span><i class="fa-solid fa-angle-right"></i></span></button>
               </div>
 
-              {/* <div className='displayed-books'>
-<div className='cover-img-container'>
-<img src="" alt="cover page" />
-</div>
-</div> */}
+           
+                <BookCovers />
+              
 
-              {/* cover img goes here */}
-              <BookCovers />
+
+
+
 
               <div className='category flex justify-start items-center flex-col w-full'>
 
@@ -66,21 +85,7 @@ const BookList = () => {
 
 
 
-                <div className='cat-covers'>
 
-                  <div className='main-cover-container'>
-
-                    <div className='cover-main'>
-
-                      <div className='cat-cover'>
-                        <img src="" alt="cover page" />
-                      </div>
-
-                    </div>
-
-                  </div>
-
-                </div>
 
               </div>
 

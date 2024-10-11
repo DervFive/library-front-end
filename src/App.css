@@ -84,15 +84,15 @@ body {
 
 /* this is where I style the buttons for the landing page */
 
-.btns button:nth-child(1) {
+.find-btn {
     background-color: #FF3131;
 }
 
-.btns button:nth-child(2) {
+.add-btn {
     transition: 1s;
 }
 
-.btns button:nth-child(2):hover {
+.add-btn:hover {
     background-color: #ffffff;
     color: #FF3131;
     border: none;

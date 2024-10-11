@@ -1,45 +1,62 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Navbar from "../../components/Navbar";
+import { useParams } from "react-router-dom";
+import axios from "axios";
+import { BASE_URL } from "../../constants";
 
 const BookDetails = () => {
+  const {id} = useParams()
+
+  const [book, setBook] = useState({})
+
   const handleStartReading = () => {
-    alert("Starting the book!");
+    alert("Starting the book!?");
   };
   const handleDeleteBook = () => {
-    alert("Delete the book!");
+    alert("Delete the book!?");
   }
+
+  const fetchBook = async ()=>{
+    try {
+      const res = await axios.get(`${BASE_URL}/books/${id}`)
+      console.log(res.data)
+      setBook(res.data)
+    } catch (error) {
+      console.log("ERror fetching book", error)
+    }
+  }
+
+useEffect(() => {
+  fetchBook()
+}, [])
+
+  
 
   return (
     <>
       <Navbar />
       <div className=" flex justify-center flex-col bg-gray-100  p-10 W-[100%] mx-auto">
-        <div className="max-w-6xl mx-auto bg-white shadow-lg rounded-lg p-8 flex space-x-6">
+        <div className="max-w-4xl mx-auto bg-white shadow-lg rounded-lg p-8 flex space-x-6">
           {/* navbar goes here to the side */}
 
           {/* book details main Content */}
           <div className="w-5/6 flex">
             <div className="w-1/3">
               <img
-                src="https://via.placeholder.com/200x300"
-                alt="Book Cover"
-                className="shadow-md rounded-lg" />
+                src={book.cover}
+                alt={book.title}
+                className="shadow-md rounded-lg max-w[100%] max-h-[100%]" />
             </div>
+
             <div className="w-2/3 pl-6">
+
               <header className="flex justify-between items-center mb-6">
-                <h1 className="text-2xl font-bold">Harry Potter: Half Blood Prince</h1>
-                {/*<div className="flex items-center space-x-3">
-                <span className="text-gray-600">Alexander Mark</span>
-                <img
-                  src="https://via.placeholder.com/40"
-                  alt="User Avatar"
-                  className="w-10 h-10 rounded-full"
-                />
-              </div>*/}
+                <h1 className="text-2xl font-bold">{book.title}</h1>
               </header>
 
-              <h2 className="text-xl font-semibold">J.K. Rowling</h2>
+              <h2 className="text-xl font-semibold">{book.author}</h2>
               <p className="text-gray-700 mt-2">
-                BIO
+                {book.bio}
               </p>
               <div className="flex flex-cols-5 gap-x-4">
                 <button className="mt-32 px-4 py-2 bg-black text-white rounded-full hover:bg-[#f57a49] text-xs w-52"
@@ -65,23 +82,18 @@ const BookDetails = () => {
           <div className="w-[50%]">
           <h3 className="text-lg font-semibold">Description</h3>
           <p className="text-gray-700 mt-2">
-            The story takes place during Harry's sixth year at Hogwarts School of
-            Witchcraft and Wizardry, where he discovers more about Lord Voldemort's
-            past and the prophecy that foretells his defeat. With action-packed
-            sequences, shocking twists, and moments of heart-wrenching tragedy,
-            "Half-Blood Prince" is a must-read for any fan of the Harry Potter
-            series.
+            {book.description}
           </p>
           </div>
           <div className="flex flex-col">
           <div className="mt-6">
             <h3 className="text-lg font-semibold">Language</h3>
-            <p className="text-gray-600">Standard English (USA & UK)</p>
+            <p className="text-gray-600">{book.language}</p>
           </div>
           <div className="mt-6">
             <h3 className="text-lg font-semibold">Date Published</h3>
             <p className="text-gray-600">
-              345 pages, ISBN: 978-3-123-45678-9
+              {book.datePublished}
             </p>
             </div>
             </div>

@@ -4,6 +4,8 @@ import BookList from './pages/bookList';
 import AddBook from './pages/addBook';
 import BookDetails from './pages/bookDetails';
 import LandingPage from './pages/landingPage';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 function App() {
@@ -29,7 +31,13 @@ function App() {
  
   ])
 
-  return <RouterProvider router={router}/>
+  return (
+    <>
+     <ToastContainer />
+     <RouterProvider router={router}/>
+    </>
+  );
+  
 
 
   

@@ -54,16 +54,6 @@ const Carousel = () => {
 
             <div className="timeRunning"></div>
 
-            {/* <div className=" flex justify-end bg-red-600/20 h-full rounded-[20px]">
-
-                <div className="flex justify-center items-end  flex-col w-1/4 text-white mr-56 ">
-                    <h1 className="text-7xl font-bold">Harry <span className="text-[#ff3131]  ">Porter</span></h1>
-                    <p>Descriptions from  the books goes ehere</p>
-                    <button className="py-2 px-4 rounded border border-solid border-[#ff1f1f]">Read Book</button>
-                </div>
-
-            </div> */}
-
         </div>
     )
 }
