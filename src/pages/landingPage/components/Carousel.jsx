@@ -9,17 +9,17 @@ const Carousel = () => {
             <div className="list">
 
 
-                <div className="landing-page w-[180px] h-[250px] rounded-[20px] bg-[url('./src/assets/images/otegha.jpg')] " >
+                <div className="landing-page w-[180px] h-[250px] rounded-[20px] bg-[url('../src/assets/images/otegha.jpg')] " >
 
                 </div>
 
-                <div className="landing-page w-[180px] h-[250px] rounded-[20px] bg-[url('./src/assets/images/collection.jpg')] ">
+                <div className="landing-page w-[180px] h-[250px] rounded-[20px] bg-[url('../src/assets/images/collection.jpg')] ">
                     {/* <LandingText /> */}
                     <LandingText />
 
                 </div>
 
-                <div className="landing-page w-[180px] h-[250px] rounded-[20px] bg-[url('./src/assets/images/janne.jpg')] ">
+                <div className="landing-page w-[180px] h-[250px] rounded-[20px] bg-[url('../src/assets/images/janne.jpg')] ">
 
                 </div>
 
