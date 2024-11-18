@@ -23,24 +23,24 @@ const Carousel = () => {
 
                 </div>
 
-                <div className="landing-page w-[180px] h-[250px] rounded-[20px] bg-[url('./src/assets/images/ikigai.jpg')]">
+                <div className="landing-page w-[180px] h-[250px] rounded-[20px] bg-[url('../src/assets/images/ikigai.jpg')]">
 
                 </div>
 
-                <div className="landing-page w-[180px] h-[250px] rounded-[20px] bg-[url('./src/assets/images/harry-porter.jpg')] ">
+                <div className="landing-page w-[180px] h-[250px] rounded-[20px] bg-[url('../src/assets/images/harry-porter.jpg')] ">
 
 
                 </div>
 
-                <div className="landing-page w-[180px] h-[250px] rounded-[20px] bg-[url('./src/assets/images/nikita-porter.jpg')] ">
+                <div className="landing-page w-[180px] h-[250px] rounded-[20px] bg-[url('../src/assets/images/nikita-porter.jpg')] ">
 
                 </div>
 
-                <div className="landing-page w-[180px] h-[250px] rounded-[20px] bg-[url('./src/assets/images/harry-porter.jpg')] ">
+                <div className="landing-page w-[180px] h-[250px] rounded-[20px] bg-[url('../src/assets/images/harry-porter.jpg')] ">
 
                 </div>
 
-                <div className="landing-page w-[180px] h-[250px] rounded-[20px] bg-[url('./src/assets/images/harry-porter.jpg')] ">
+                <div className="landing-page w-[180px] h-[250px] rounded-[20px] bg-[url('../src/assets/images/harry-porter.jpg')] ">
 
                 </div>
 
