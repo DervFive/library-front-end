@@ -5,9 +5,11 @@ import { toast } from "react-toastify";
 import axios from "axios";
 import { BASE_URL } from "../../constants";
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const AddBooks = () => {
   const [authors, setAuthors] = useState([]);
+  const navigate = useNavigate();
 
   const getAuthors = async () => {
     const response = await axios.get(`${BASE_URL}/authors`);
@@ -35,6 +37,7 @@ const AddBooks = () => {
         language: formData.get("language"),
       });
       toast.success('Book added');
+      navigate("/booklist")
     } catch (error) {
       toast.error("Book Could not be added");
       // console.log(error);
