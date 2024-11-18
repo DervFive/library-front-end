@@ -18,7 +18,7 @@ const BookDetails = () => {
 
   const fetchBook = async ()=>{
     try {
-      const res = await axios.get(`${BASE_URL}/books/${id}`)
+      const res = await axios.get(`${BASE_URL}/Books/${id}`)
       console.log(res.data)
       setBook(res.data)
     } catch (error) {

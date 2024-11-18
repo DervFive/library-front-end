@@ -19,7 +19,7 @@ const LandingText = () => {
                         <Link to='/booklist'><button className=" find-btn py-2 px-4 rounded  ">Find a Book</button></Link>
 
                         <Link to='/add-new'>
-                            <button className=" add-btn py-2 px-4 rounded border border-solid border-[#ff1f1f]">Add a Book<span className="ml-[5px]"><i class="fa-solid fa-download"></i></span> </button>
+                            <button className=" add-btn py-2 px-4 rounded border border-solid border-[#ff1f1f]">Add a Book<span className="ml-[5px]"><i class="fa-regular fa-square-plus"></i></span> </button>
                         </Link>
                     </div>
 
